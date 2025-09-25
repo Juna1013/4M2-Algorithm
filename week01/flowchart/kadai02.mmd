@@ -1,0 +1,14 @@
+```mermaid
+graph TD
+    A[開始] --> B[整数 n を入力]
+    B --> C[i = 0 に初期化]
+    C --> D{i <= n}
+    D -->|Yes| E[j = 0 に初期化]
+    E --> F{j < i}
+    F -->|Yes| G[*を表示]
+    G --> H[j = j + 1]
+    H --> F
+    F -->|No| I[改行]
+    I --> J[i = i + 1]
+    J --> D
+    D -->|No| K[終了]
