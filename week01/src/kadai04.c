@@ -9,4 +9,5 @@ int main(void) {
     } else {
         printf("5の倍数ではありません\n");
     }
+    return 0;
 }
