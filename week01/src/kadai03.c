@@ -3,7 +3,7 @@
 int main(void) {
     int N;
     scanf("%d", &N);
-
+    
     if (N % 2 == 0) {
         printf("2の倍数です\n");
     } else {
