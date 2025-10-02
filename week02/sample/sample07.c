@@ -1,3 +1,4 @@
+// enqueue と dequeue でキューをC言語で実装
 #include <stdio.h>
 
 #define N 10
