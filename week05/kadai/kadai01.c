@@ -1,3 +1,4 @@
+// クイックソート
 #include <stdio.h>
 
 void QuickSort(int *S, int lower, int upper) {
