@@ -2,18 +2,21 @@
 #include <stdio.h>
 
 void QuickSort(int S[], int lower, int upper) {
+    if (lower >= upper) return; // ベースケース：要素が1個以下の場合は何もしない
+    
     int i = lower; // 左側の探索インデックス
     int j = upper; // 右側の探索インデックス
-    int mid = S[(lower + upper) / 2]; // ピボット（中央の要素を採用）
+    int pivot_index = (lower + upper) / 2; // ピボットのインデックス
+    int pivot = S[pivot_index]; // ピボット値
     int tmp; // 値の入れ替え用変数
 
     // ピボットを基準に小と大に振り分ける
     do {
-        // 左側からmid以上の要素が出るまで右へ進める
-        while (S[i] < mid) i++;
+        // 左側からpivot以上の要素が出るまで右へ進める
+        while (S[i] < pivot) i++;
 
-        // 右側からmid以下の要素が出るまで左へ戻す
-        while (S[j] > mid) j--;
+        // 右側からpivot以下の要素が出るまで左へ戻す
+        while (S[j] > pivot) j--;
 
         // iとjが交差する前に、左右で値が逆転していれば入れ替え
         if (i <= j) {
